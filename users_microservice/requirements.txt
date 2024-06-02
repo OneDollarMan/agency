@@ -1,0 +1,8 @@
+fastapi~=0.111.0
+pydantic~=2.7.1
+sqlalchemy
+fastapi-users[sqlalchemy]
+psycopg[binary,pool]
+asyncpg
+requests
+alembic
