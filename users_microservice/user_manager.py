@@ -24,7 +24,7 @@ class UserManager(UUIDIDMixin, BaseUserManager[User, uuid.UUID]):
         if user.first_name == 'admin':
             user_update = UserRoleUpdate(role_id=1, is_superuser=True)
         else:
-            user_update = UserRoleUpdate(role_id=2)
+            user_update = UserRoleUpdate(role_id=2, us_superuser=False)
         await self.update(user_update=user_update, user=user, safe=False, request=request)
 
     async def on_after_forgot_password(
